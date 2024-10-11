@@ -1,5 +1,7 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { useAuthStore } from "./stores/auth";
+
+const auth = useAuthStore();
 </script>
 
 <template>
@@ -10,7 +12,7 @@ import { RouterLink, RouterView } from "vue-router";
           <v-btn :to="{ name: 'home' }"> Bienes Raices - VueFire </v-btn>
         </template>
 
-        <!-- <template v-slot:append>
+        <template v-slot:append>
           <div v-if="auth.isAuth">
             <v-btn :to="{ name: 'admin-propiedades' }">Admin</v-btn>
             <v-btn @click="auth.logout">Cerrar Sesión</v-btn>
@@ -19,10 +21,6 @@ import { RouterLink, RouterView } from "vue-router";
             <v-btn :to="{ name: 'home' }">Inicio</v-btn>
             <v-btn :to="{ name: 'login' }">Iniciar Sesión</v-btn>
           </div>
-        </template> -->
-        <template v-slot:append>
-          <v-btn :to="{ name: 'home' }">Inicio</v-btn>
-          <v-btn :to="{ name: 'login' }">Iniciar Sesión</v-btn>
         </template>
       </v-app-bar>
 
