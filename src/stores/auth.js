@@ -15,6 +15,7 @@ export const useAuthStore = defineStore('auth', () => {
         'auth/user-not-found' : 'Usuario no encontrado',
         'auth/wrong-password' : 'El password es incorrecto',
         'auth/invalid-credential' : 'Credenciales invalidas',
+        'auth/invalid-email' : 'El email es invalido',
     }
 
     onMounted(() => {
